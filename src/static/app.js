@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         participantsSection.className = "participants-section";
 
         const participantsHeading = document.createElement("h5");
-        participantsHeading.textContent = "Participants";
+        participantsHeading.textContent = "Participantes";
         participantsSection.appendChild(participantsHeading);
 
         const participantsList = document.createElement("ul");
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (details.participants.length === 0) {
           const emptyItem = document.createElement("li");
           emptyItem.className = "participant-item empty";
-          emptyItem.textContent = "No participants yet.";
+          emptyItem.textContent = "Nenhum participante ainda.";
           participantsList.appendChild(emptyItem);
         } else {
           details.participants.forEach((participant) => {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const removeButton = document.createElement("button");
             removeButton.className = "participant-remove";
             removeButton.type = "button";
-            removeButton.title = `Remove ${participant}`;
+            removeButton.title = `Remover ${participant}`;
             removeButton.textContent = "✕";
             removeButton.addEventListener("click", () => {
               deleteParticipant(name, participant);
